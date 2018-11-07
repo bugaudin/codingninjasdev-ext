@@ -10,7 +10,7 @@ class App
 	const FREELANCER_SELECT_ID 		= 'freelancer_select';
 	const TASKS_ROUTE				= 'tasks';
 	
-	private $required_plugins = array("codingninjasdev-cn_php_wp_plugin_for_tasks-8847682394b4/coding-ninjas.php");
+	private $required_plugins = array("coding-ninjas/coding-ninjas.php");
 		
 	/**
 	* Task 1.
