@@ -174,7 +174,7 @@ class App
 			$pagename = get_query_var('pagename');
 			$title['title'] = ucfirst($pagename);
 		}
-		return apply_filters ('cne_on_change_404_title', $title, $this);
+		return apply_filters ('cne_on_change_404_title', $title);
 	}
 	
 	/**
@@ -185,7 +185,7 @@ class App
 	*/
 	public static function on_insert_freelancers_title( $cols ) {
 		array_splice($cols, 2, 0, [__('Freelancer', 'cn')]);
-		return apply_filters ('cne_on_insert_freelancers_title', $cols, $this);
+		return apply_filters ('cne_on_insert_freelancers_title', $cols);
 	}
 
 	/**
@@ -205,7 +205,7 @@ class App
 			$name = __('Not specified', 'cn');
 		}
 		array_splice($cols, 2, 0, $name);
-		return apply_filters ('cne_on_insert_freelancers_col', $cols, $this);
+		return apply_filters ('cne_on_insert_freelancers_col', $cols);
 	}
 	
 	/**
@@ -246,7 +246,7 @@ class App
             ]
         );
 		$res = $menu.$popupLink.$popup;
-		return apply_filters ('cne_on_add_new_task_menu_item', $res, $this);
+		return apply_filters ('cne_on_add_new_task_menu_item', $res);
 	}
 	
 	/**
@@ -315,7 +315,7 @@ class App
 		{
 			$freelancers += array($r->id => $r->post_title);
 		}
-		return apply_filters ('cne_get_freelancers', $freelancers, $this);
+		return apply_filters ('cne_get_freelancers', $freelancers);
 	}
  
 	/**
@@ -352,7 +352,7 @@ class App
                 'data' => $data			
             ]
         );
-		return apply_filters ('cne_get_freelancers_widget', $freelancers_widget, $this);
+		return apply_filters ('cne_get_freelancers_widget', $freelancers_widget);
 	}
 	
 	/**
